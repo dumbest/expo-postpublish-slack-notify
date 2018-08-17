@@ -10,7 +10,7 @@ module.exports = ({ url, iosManifest, config }) => {
    
     slack.send(
       {
-        text: `${iosManifest.name} v${iosManifest.version} (${iosManifest.buildNumber}) published to ${url + queryString}`,
+        text: `${iosManifest.name} v${iosManifest.version} (${iosManifest.ios.buildNumber}) published to ${url + queryString}`,
         unfurl_links: 0,
       },
       err => {
